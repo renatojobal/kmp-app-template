@@ -116,6 +116,8 @@ In release builds, `CrashReporterAntilog` forwards Napier `WARN`/`ERROR` events 
 
 ## Compose UI rules
 
+Follow the guidelines in `20-jetpack-compose-mistakes.md` (project root) when writing Compose UI. Highlights:
+
 - Use `LaunchedEffect`/`DisposableEffect` for side effects, never raw coroutine launches in composables
 - Immutable lists only for state (`listOf`, not `mutableListOf`)
 - `collectAsStateWithLifecycle()` instead of `collectAsState()`
@@ -129,7 +131,14 @@ In release builds, `CrashReporterAntilog` forwards Napier `WARN`/`ERROR` events 
 
 ## Related skills
 
-Use the matching `/android-*` skills (when available) for guidance on specific layers:
-- `/android-arch`, `/android-data-layer`, `/android-presentation-mvi`,
-  `/android-di-koin`, `/android-error-handling`, `/android-compose-ui`,
-  `/android-navigation`, `/android-testing`, `/android-module-structure`
+The `/android-*` skills ship with the template under `.claude/skills/` — Claude Code picks them up automatically. Use them for layer-specific guidance:
+
+- `/android-arch` — Clean Architecture conventions (naming, layering, MVI)
+- `/android-module-structure` — Module layout + Gradle convention plugins
+- `/android-data-layer` — Repositories, data sources, mappers, DTOs
+- `/android-presentation-mvi` — ViewModels, State/Action/Event, Root/Screen split
+- `/android-di-koin` — Koin modules and ViewModel injection
+- `/android-error-handling` — Result wrapper, DataError, UiText
+- `/android-compose-ui` — Recomposition, side effects, animations, design system
+- `/android-navigation` — Type-safe Navigation Compose graphs
+- `/android-testing` — ViewModel tests with Kotest + Turbine + fakes

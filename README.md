@@ -63,4 +63,20 @@ features/<feature_name>/
 
 `data -> domain <- ui`. Domain is pure Kotlin. ViewModels go through use cases — never directly to a repository or data source.
 
-See `CLAUDE.md` for the full conventions list.
+The `androidUnitTest` source set ships a Konsist test (`CleanArchitectureTest.kt`) that enforces the layer rules + naming conventions on every build, so the architecture doesn't rot.
+
+See `CLAUDE.md` for the full conventions list and `20-jetpack-compose-mistakes.md` for the Compose-specific guidelines.
+
+## Ships with Claude Code skills
+
+`.claude/skills/` contains the `/android-*` skills — Claude Code picks them up automatically when you work in this repo:
+
+- `/android-arch` — Clean Architecture conventions
+- `/android-module-structure` — Module layout + Gradle convention plugins
+- `/android-data-layer` — Repositories, data sources, mappers
+- `/android-presentation-mvi` — ViewModels, State/Action, Root/Screen split
+- `/android-di-koin` — Koin modules and ViewModel injection
+- `/android-error-handling` — Result wrapper, DataError, UiText
+- `/android-compose-ui` — Recomposition, side effects, animations
+- `/android-navigation` — Type-safe Navigation Compose graphs
+- `/android-testing` — ViewModel tests with Kotest + Turbine + fakes

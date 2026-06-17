@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_network">No internet connection. Try again.</string>
+    <string name="error_unauthorized">Your session expired. Please sign in again.</string>
+    <string name="error_not_found">We couldn\'t find what you were looking for.</string>
+    <string name="error_conflict">Someone else changed this first. Pull and retry.</string>
+    <string name="error_unexpected">Something went wrong. Try again.</string>
+</resources>

@@ -1,0 +1,34 @@
+CREATE TABLE Todo (
+    id TEXT NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    isDone INTEGER NOT NULL DEFAULT 0,
+    createdAt INTEGER NOT NULL
+);
+
+CREATE INDEX todo_created_at ON Todo(createdAt);
+
+selectAll:
+SELECT *
+FROM Todo
+ORDER BY createdAt DESC;
+
+selectById:
+SELECT *
+FROM Todo
+WHERE id = ?;
+
+insert:
+INSERT INTO Todo (id, title, isDone, createdAt)
+VALUES (?, ?, ?, ?);
+
+updateDone:
+UPDATE Todo
+SET isDone = ?
+WHERE id = ?;
+
+deleteById:
+DELETE FROM Todo
+WHERE id = ?;
+
+deleteAll:
+DELETE FROM Todo;

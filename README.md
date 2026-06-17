@@ -80,3 +80,7 @@ See `CLAUDE.md` for the full conventions list and `20-jetpack-compose-mistakes.m
 - `/android-compose-ui` — Recomposition, side effects, animations
 - `/android-navigation` — Type-safe Navigation Compose graphs
 - `/android-testing` — ViewModel tests with Kotest + Turbine + fakes
+
+## License
+
+MIT — see [LICENSE](LICENSE).
